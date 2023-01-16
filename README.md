@@ -3,19 +3,16 @@
 ## **Introduction**
 This project aims to use smartcar with Raspberry to go through a maze.  
 During the process, smartcar must do certain motivation when it identifies corresponding traffic sign.   
-Following images are the results of during process. Take traffic sign - "Turn right only" for example.
-1. Assume This image is the picture captured by camera.
+Following images are the results during process. Take traffic sign - "_Turn right only_" for example.
+1. Assume This image is the picture captured by camera.  
+<img src="https://github.com/Sean053047/Traffic-Sign-Identification/blob/main/Github_README_img/img.jpg" alt="Cover" width="30%"/>
 
-!(Raw image)[https://drive.google.com/file/d/1KUACezDVrgfG54vF8nw-QEAj5_8Mbzh5/view]
+2. I can get the mask of traffic sign by means of image processing.  
+<img src="https://github.com/Sean053047/Traffic-Sign-Identification/blob/main/Github_README_img/mask.jpg" alt="Cover" width="30%"/>
 
-2. I can get the mask of traffic sign by means of image processing. 
-
-!(Mask)[https://drive.google.com/file/d/1aGDd0UG4ng6w91vbMs7ZHc5GyndRJ_ie/view]
-
-3. Resize the effective region to make sign significant and also be higher representative than raw image. After that, we can send it into model to predict what kind of sign it is.
-
-!(Align)[https://drive.google.com/file/d/1lBO8yZUJzd66qUizP8j9uVS3qIP9xu2q/view]
-
+3. Resize the effective region to make sign significant and also be higher representative than raw image. After that, we can send it into model to predict what kind of sign it is.  
+<img src="https://github.com/Sean053047/Traffic-Sign-Identification/blob/main/Github_README_img/align.jpg" alt="Cover" width="300"/>
+  
 Here is our team's [_demo video_](https://youtube.com/shorts/5QEpH4niNis?feature=share) of competition.  
 In the maze, There are seven kinds of sign which should be recognized listed below :
 |Traffic Sign|Description|
