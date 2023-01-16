@@ -10,11 +10,11 @@ Following images are the results of during process. Take traffic sign - "Turn ri
 
 2. I can get the mask of traffic sign by means of image processing. 
 
-!(Raw image)[https://drive.google.com/file/d/1aGDd0UG4ng6w91vbMs7ZHc5GyndRJ_ie/view]
+!(Mask)[https://drive.google.com/file/d/1aGDd0UG4ng6w91vbMs7ZHc5GyndRJ_ie/view]
 
 3. Resize the effective region to make sign significant and also be higher representative than raw image. After that, we can send it into model to predict what kind of sign it is.
 
-!(Raw image)[https://drive.google.com/file/d/1lBO8yZUJzd66qUizP8j9uVS3qIP9xu2q/view]
+!(Align)[https://drive.google.com/file/d/1lBO8yZUJzd66qUizP8j9uVS3qIP9xu2q/view]
 
 Here is our team's [_demo video_](https://youtube.com/shorts/5QEpH4niNis?feature=share) of competition.  
 In the maze, There are seven kinds of sign which should be recognized listed below :
