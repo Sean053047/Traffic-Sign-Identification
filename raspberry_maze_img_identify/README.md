@@ -1,44 +1,11 @@
-# Traffic Sign Identification
-
-## **Introduction**
-This project aims to use smartcar with Raspberry to go through a maze.  
-During the process, smartcar must do certain motivation when it identifies corresponding traffic sign.  
-Here is our team's [_demo video_](https://youtube.com/shorts/5QEpH4niNis?feature=share) of competition.  
-In the maze, There are seven kinds of sign which should be recognized listed below :
-|Traffic Sign|Description|
-|:--:|:---|
-|NL|Do not turn left.|
-|NONE| None of sign in image.|
-|NR|Do not turn right.|
-|NSTOP|Do not stop the car.|
-|OR|Turn right only.|
-|STOP_LINE|Stop car first, then go forward. (White line)| 
-|STOP_THEN_GO|Stop car first, then go forward. (Red octagonal sign)|
-
-Besides project codes, I also push some raw data onto the repository. If you are interesting in this, you can download data and do it by yourself.
-
-Following section, I will give you a brief introduction to let you know how those function work.
-
-## **Requirement**
-### Python: 3.10
-| Package| Versions|
-|:---:|:---:|
-|Numpy|1.24.1|
-|opencv-contrib-python|4.7.0.68|
-|joblib|1.2.0|
-|scikit-learn|1.2.0|
-|scikit-image|0.19.3|
-
-
-
-## **Module description**
+# **Module description**
 >Here, I will illustrate three modules of project about features and how they work.   
 
 Following are three modules I will talk about :
 * _Image_processing.py_
 * _Sign_detect.py_
 * _Training.py_
-### **_Image_processing.py_**
+## **_Image_processing.py_**
 >_Image_processing.py_ aims to deal with raw data to capture traffic sign out from raw image.  
 
 **Usage**
@@ -83,7 +50,7 @@ After that, using _cv2.minAreaRect()_ and _cv2.boxPoints()_ can gain the four en
 
 >Final Step:  
 Use the four end points to get the transform matrix of perspective transform to resize the image. Then you can get the {_size_}*{_size_} aligned image which has a good representative of traffic sign. 
-### **_Training.py_**
+## **_Training.py_**
 >Before training, you should check the representative of training data. Discard the unwanted aligned image. This operation can rise your accuracy.  
 Data which were processed by _Image_processing.py_ will later be processed by  
 >1. _Resize_ ( {_size_}*{_size_} img ), 
@@ -98,7 +65,7 @@ Data which were processed by _Image_processing.py_ will later be processed by
 >* _Traffic-sign_hogify_64.pkl_
 >* _Traffic-sign_scalify_64.pkl_
 >* _Traffic-sign_model_64.pkl_
-### **_Sign_detect.py_**
+## **_Sign_detect.py_**
 >Before prediction, this module should import three classes such as "_RGB2GrayTransformer_", "_HogTransformer_" from "_Training_", "_StandardScaler_"  from "_sklearn.preprocessing_" and "_svm_" from "_sklearn_". Then the module knows what loaded pickle files are and it can operate succesfully.
 Raw image follows the same steps as training before fitting. Then it will be send into model to predict which sign it is.
 
