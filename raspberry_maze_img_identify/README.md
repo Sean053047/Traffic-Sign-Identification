@@ -32,7 +32,7 @@ There are three main kinds of colors of traffic sign which would appear in this 
 >It will use the difference of b&g,b&r  and difference of r&b, r&g to get the blue region and red region individually. _"mask"_ is a binary image which represents the effective region of sign.  
 
 >Step 2:  
-Compare the magnitude of blue regioin with red region to determinate that raw image is blue sign or red sign. If magnitude of region is not large enough, raw image may possibly be white sign and it will be processed by _get_white_ function.  
+Compare the magnitude of blue regioin with red region to determinate that raw image is blue sign or red sign. If both area of red mask and blue mask are not large enough, raw image will be treated as white sign and will be processed by _get_white_ function.  
 
 >Final Step:  
 After Comparison, we can gain the effective region  of traffic sign (_mask_) and the name of main color (_color_). These variables will be returned from this function.
